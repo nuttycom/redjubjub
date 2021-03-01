@@ -20,6 +20,7 @@ mod constants;
 mod error;
 pub mod frost;
 mod hash;
+pub mod orchard;
 pub mod sapling;
 mod scalar_mul;
 mod signature;
