@@ -22,6 +22,7 @@
 //! Internally, keygen_with_dealer generates keys using Verifiable Secret
 //! Sharing,  where shares are generated using Shamir Secret Sharing.
 
+use jubjub::Scalar;
 use rand_core::{CryptoRng, RngCore};
 use std::convert::TryFrom;
 
@@ -30,7 +31,7 @@ use std::{collections::HashMap, marker::PhantomData};
 use zeroize::Zeroize;
 
 use crate::private::Sealed;
-use crate::{HStar, Scalar, Signature, SpendAuth, VerificationKey};
+use crate::{HStar, Signature, SpendAuth, VerificationKey};
 
 /// A secret scalar value representing a single signer's secret key.
 #[derive(Clone, Default)]
