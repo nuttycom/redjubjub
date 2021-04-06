@@ -26,20 +26,20 @@ features = ["nightly"]
 blake2b_simd = "0.5"
 byteorder = "1.3"
 digest = "0.9"
-ff = "0.9"
-group = "0.9"
-jubjub = "0.6"
+#ff = "0.9"
+ff = { git = "https://github.com/nuttycom/ff", branch = "bitvec-0.22" }
+#group = "0.9"
+group = { git = "https://github.com/nuttycom/group", branch = "bitvec-0.22" }
+#jubjub = "0.6"
+jubjub = { git = "https://github.com/nuttycom/jubjub", branch = "bitvec-0.22" }
 rand_core = "0.5"
 serde = { version = "1", optional = true, features = ["derive"] }
 thiserror = "1.0"
 zeroize = { version = "1", default-features = false, features = ["zeroize_derive"] }
 
-# Temporary workaround for https://github.com/myrrlyn/funty/issues/3
-funty = "=1.1.0"
-
 [dependencies.pasta_curves]
-git = "https://github.com/zcash/pasta_curves.git"
-rev = "0a6b2f6eb5acbe1dabc9e77ed0bcb748cc640196"
+git = "https://github.com/nuttycom/pasta_curves.git"
+branch = "bitvec-0.22"
 
 [dev-dependencies]
 bincode = "1"
